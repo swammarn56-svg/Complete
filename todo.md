@@ -1,0 +1,55 @@
+# Project TODO
+
+- [x] Inspect the supplied Bakery ERP archive and map reusable UI, routes, and data workflows into the active project.
+- [x] Define the inventory data model, effective-dated item lifecycle, role model, stock calculations, and monthly average-cost rules.
+- [x] Create the Item Dashboard with separate Packaging, Production, and Sales tabs.
+- [x] Implement effective-start item visibility, effective-date soft deletion, rename, minimum stock, category assignment, and synchronized item ordering.
+- [x] Restrict cost-per-unit visibility to the Sales item tab and sales-related authorised screens only.
+- [x] Implement Purchase Packaging entries in pieces with quantity, note, and cost data.
+- [x] Implement Purchase Production entries with g, kg, and viss input units and canonical gram storage.
+- [x] Automatically feed purchase quantities into the corresponding daily Production and Packaging In values.
+- [x] Implement the Production daily ledger with Opening, In, Issued, Return, Damage, Used, Closing, and Note fields and validated formulas.
+- [x] Implement the Packaging daily ledger with the same balances, formulas, and synchronized item order.
+- [x] Implement shop management including store-specific per-item prices.
+- [x] Implement the Sales daily ledger with manual Produce and Sell, automatic Opening and Closing, shop selection, and notes.
+- [x] Implement daily dashboard metrics for purchases, closing stock, damage, sales margin, and low-stock alerts.
+- [x] Calculate purchase valuation by calendar-month average cost only.
+- [x] Implement date-range reports for purchases, per-item production, packaging, sales, and damage valuation.
+- [x] Implement user role management, recipe storage, and database backup export.
+- [x] Implement spreadsheet exports, import validation, and downloadable format templates for Purchase, Production, Packaging, and Sales.
+- [x] Add automated tests for date-effective item behavior, unit conversion, ledger formulas, and monthly average cost.
+- [x] Verify the application UI, calculations, build, and critical workflows before delivery.
+- [x] Add category assignment to the item data model and Item Dashboard.
+- [x] Restrict Sales cost-per-unit responses and controls to authorised administrators.
+- [x] Present separate date-range purchase, production, packaging, sales, and damage report workflows.
+- [x] Expand recipe storage to support multi-line component editing and deletion.
+- [x] Document and complete end-to-end QA for cross-module flows and spreadsheet exchange.
+- [x] Restrict Item Dashboard add, edit, delete, reorder, and Sales cost inputs to administrators in the frontend.
+- [x] Execute and record live acceptance checks for critical operational flows without seeding business data.
+- [x] Compare the final requirement document with the current implementation and record the remaining workflow gaps.
+- [x] Preserve piece-based inventory in pcs rather than converting it to grams, while retaining gram conversion for weight-based items.
+- [x] Add confirmed purchase status and table fields for purchase unit, base quantity, unit price, total price, date, and note.
+- [x] Add Sales total-price calculation using the selected shop-item price and expand sales reporting by shop, item, and date range.
+- [x] Add report balances and valuations for opening, in, issued, return, damage, used, closing, cost, and total value.
+- [x] Add CSV import/export and verify Myanmar Unicode data preservation across UI and spreadsheet exchange.
+- [x] Run source type checking and tests without producing a deployable application build artifact.
+- [x] Create a GitHub-ready ZIP archive that excludes dependencies, build output, local logs, and secrets.
+- [x] Verify Myanmar Unicode CSV/XLSX import, UI/report display, and export round-trip without creating production records.
+- [x] Run a live Unicode import-to-report acceptance check after an administrator supplies approved non-production test data.
+- [x] Temporarily grant the authorised test session the minimum administration access needed to create isolated test records.
+- [x] Create and verify a uniquely labelled Unicode item, shop, confirmed purchase, Production ledger row, Packaging ledger row, Sales row, report values, and CSV/XLSX exchange.
+- [x] Delete every uniquely labelled temporary test record and restore the original user role.
+- [x] Create isolated temporary data for a live Unicode CSV/XLSX import-to-report and export-readback acceptance check.
+- [x] Import a live Unicode spreadsheet row, verify it in the applicable UI/report, export it, and record the evidence.
+- [x] Delete the spreadsheet-exchange temporary records and restore the original user role after the live check.
+- [x] Run a live XLSX Unicode import and export acceptance check with isolated temporary data, then remove it.
+- [x] Re-read and confirm the completed live CSV/XLSX evidence in the QA record.
+- [x] Inspect the current database access layer and define a safe Supabase replacement plan.
+- [x] Configure the supplied Supabase project URL and publishable key through managed environment variables.
+- [x] Obtain a server-side Supabase credential or database connection string required for schema migration and protected ERP writes.
+- [x] Create and apply the Supabase schema, row-level security, and indexes for Bakery ERP data.
+- [x] Replace the current database access layer with Supabase-backed queries and mutations.
+- [x] Validate Supabase connectivity, role access, operational calculations, and Unicode spreadsheet workflows.
+- [x] Package the Supabase-connected source code as an updated GitHub-ready ZIP.
+- [ ] Re-run and record Supabase-backed QA for admin/user role restrictions plus a live Unicode import/export workflow against the migrated database.
+- [ ] Create a fresh GitHub-ready ZIP from the final Supabase-connected source tree and record its output path and exclusion rules.
